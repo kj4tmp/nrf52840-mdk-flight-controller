@@ -27,7 +27,7 @@ _build/nrf52840_xxaa/nrf_fprintf_format.c.o: \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/compiler_abstraction.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_os.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_errors.h \
- ../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_error.h \
+ ../nRF5_SDK_17.0.2_d674dde/components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_util.h \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf.h \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf52840.h \
@@ -41,8 +41,6 @@ _build/nrf52840_xxaa/nrf_fprintf_format.c.o: \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf51_to_nrf52840.h \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf52_to_nrf52840.h \
  ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/compiler_abstraction.h \
- ../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf52/nrf_mbr.h \
- ../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_svc.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_macros.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/nrf_assert.h \
  /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h \
@@ -76,7 +74,7 @@ _build/nrf52840_xxaa/nrf_fprintf_format.c.o: \
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/compiler_abstraction.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_os.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_errors.h:
-../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_error.h:
+../nRF5_SDK_17.0.2_d674dde/components/drivers_nrf/nrf_soc_nosd/nrf_error.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_util.h:
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf.h:
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf52840.h:
@@ -90,8 +88,6 @@ _build/nrf52840_xxaa/nrf_fprintf_format.c.o: \
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf51_to_nrf52840.h:
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf52_to_nrf52840.h:
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/compiler_abstraction.h:
-../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf52/nrf_mbr.h:
-../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_svc.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_macros.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/nrf_assert.h:
 /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdarg.h:

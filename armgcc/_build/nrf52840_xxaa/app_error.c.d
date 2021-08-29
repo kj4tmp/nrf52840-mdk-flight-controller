@@ -39,7 +39,7 @@ _build/nrf52840_xxaa/app_error.c.o: \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_error.h \
  /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_errors.h \
- ../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_error.h \
+ ../nRF5_SDK_17.0.2_d674dde/components/drivers_nrf/nrf_soc_nosd/nrf_error.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/nordic_common.h \
  ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_error_weak.h
 ../nRF5_SDK_17.0.2_d674dde/modules/nrfx/mdk/nrf.h:
@@ -81,6 +81,6 @@ _build/nrf52840_xxaa/app_error.c.o: \
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_error.h:
 /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/sdk_errors.h:
-../nRF5_SDK_17.0.2_d674dde/components/softdevice/s140/headers/nrf_error.h:
+../nRF5_SDK_17.0.2_d674dde/components/drivers_nrf/nrf_soc_nosd/nrf_error.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/nordic_common.h:
 ../nRF5_SDK_17.0.2_d674dde/components/libraries/util/app_error_weak.h:
