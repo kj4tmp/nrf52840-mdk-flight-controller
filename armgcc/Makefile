@@ -8,10 +8,23 @@ PROJ_DIR := ..
 $(OUTPUT_DIRECTORY)/nrf52840_xxaa.out: \
 LINKER_SCRIPT  := nrf52840-mdk-flight-controller.ld
 
+#$(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_clock.c 
 # Source files common to all targets
 SRC_FILES += \
   $(SDK_ROOT)/modules/nrfx/mdk/gcc_startup_nrf52.S \
-  $(PROJ_DIR)/main.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_power.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_twi.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_ppi.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_spi.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_spis.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_uart.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_swi.c \
+  $(SDK_ROOT)/integration/nrfx/legacy/nrf_drv_rng.c \
+  $(PROJ_DIR)/src/SSD1306/glcdfont.c \
+  $(PROJ_DIR)/src/SSD1306/spi_module.c \
+  $(SDK_ROOT)/components/libraries/uart/app_uart.c \
+  $(PROJ_DIR)/src/SSD1306/uart_module.c \
+  $(PROJ_DIR)/src/SSD1306/ssd1306.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_backend_rtt.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_backend_serial.c \
   $(SDK_ROOT)/components/libraries/log/src/nrf_log_backend_uart.c \
@@ -50,10 +63,13 @@ SRC_FILES += \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_Syscalls_GCC.c \
   $(SDK_ROOT)/external/segger_rtt/SEGGER_RTT_printf.c \
   $(SDK_ROOT)/modules/nrfx/mdk/system_nrf52840.c \
+  $(SDK_ROOT)/modules/nrfx/drivers/src/nrfx_twi.c \
+  $(PROJ_DIR)/main.c \
 
 
 # Include folders common to all targets
 INC_FOLDERS += \
+  $(PROJ_DIR)/src/SSD1306 \
   $(SDK_ROOT)/components \
   $(SDK_ROOT)/modules/nrfx/mdk \
   $(SDK_ROOT)/components/libraries/scheduler \
@@ -84,12 +100,14 @@ INC_FOLDERS += \
   $(SDK_ROOT)/external/fprintf \
   $(SDK_ROOT)/components/libraries/bsp \
   $(SDK_ROOT)/components/libraries/log/src \
-
+  $(SDK_ROOT)/integration/nrfx/legacy \
+  $(SDK_ROOT)/components/libraries/uart \
+  $(SDK_ROOT)/modules/nrfx/drivers \
 # Libraries common to all targets
 LIB_FILES += \
 
 # Optimization flags
-OPT = -O3 -g3
+#OPT = -O3 -g3
 # Uncomment the line below to enable link time optimization
 #OPT += -flto
 
@@ -105,11 +123,12 @@ CFLAGS += -DNRF52840_XXAA
 CFLAGS += -DNRF52_PAN_74
 CFLAGS += -mcpu=cortex-m4
 CFLAGS += -mthumb -mabi=aapcs
-CFLAGS += -Wall -Werror
+CFLAGS += -Wall
 CFLAGS += -mfloat-abi=hard -mfpu=fpv4-sp-d16
 # keep every function in a separate section, this allows linker to discard unused ones
 CFLAGS += -ffunction-sections -fdata-sections -fno-strict-aliasing
 CFLAGS += -fno-builtin -fshort-enums
+
 
 # C++ flags common to all targets
 CXXFLAGS += $(OPT)

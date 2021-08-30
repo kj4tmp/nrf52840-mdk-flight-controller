@@ -66,7 +66,7 @@ _build/nrf52840_xxaa/main.c.o: ../main.c \
  /home/jeff/Repositories/nrf52840-mdk-flight-controller/nRF5_SDK_17.0.2_d674dde/components/boards/boards.h \
  /home/jeff/Repositories/nrf52840-mdk-flight-controller/nRF5_SDK_17.0.2_d674dde/modules/nrfx/hal/nrf_gpio.h \
  ../config/custom_board.h ../config/nrf52840_mdk.h \
- ../config/nrf52840_mdk.h
+ ../config/nrf52840_mdk.h ../src/SSD1306/ssd1306.h
 /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdbool.h:
 /home/jeff/gcc-arm-none-eabi-10.3-2021.07/lib/gcc/arm-none-eabi/10.3.1/include/stdint.h:
 /home/jeff/gcc-arm-none-eabi-10.3-2021.07/arm-none-eabi/include/stdint.h:
@@ -136,3 +136,4 @@ _build/nrf52840_xxaa/main.c.o: ../main.c \
 ../config/custom_board.h:
 ../config/nrf52840_mdk.h:
 ../config/nrf52840_mdk.h:
+../src/SSD1306/ssd1306.h:

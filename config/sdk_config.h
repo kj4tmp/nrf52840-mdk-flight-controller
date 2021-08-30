@@ -447,21 +447,21 @@
  
 
 #ifndef NRFX_SPIM0_ENABLED
-#define NRFX_SPIM0_ENABLED 0
+#define NRFX_SPIM0_ENABLED 1
 #endif
 
 // <q> NRFX_SPIM1_ENABLED  - Enable SPIM1 instance
  
 
 #ifndef NRFX_SPIM1_ENABLED
-#define NRFX_SPIM1_ENABLED 0
+#define NRFX_SPIM1_ENABLED 1
 #endif
 
 // <q> NRFX_SPIM2_ENABLED  - Enable SPIM2 instance
  
 
 #ifndef NRFX_SPIM2_ENABLED
-#define NRFX_SPIM2_ENABLED 0
+#define NRFX_SPIM2_ENABLED 1
 #endif
 
 // <o> NRFX_SPIM_MISO_PULL_CFG  - MISO pin pull configuration.
@@ -565,21 +565,21 @@
  
 
 #ifndef NRFX_SPI0_ENABLED
-#define NRFX_SPI0_ENABLED 0
+#define NRFX_SPI0_ENABLED 1
 #endif
 
 // <q> NRFX_SPI1_ENABLED  - Enable SPI1 instance
  
 
 #ifndef NRFX_SPI1_ENABLED
-#define NRFX_SPI1_ENABLED 0
+#define NRFX_SPI1_ENABLED 1
 #endif
 
 // <q> NRFX_SPI2_ENABLED  - Enable SPI2 instance
  
 
 #ifndef NRFX_SPI2_ENABLED
-#define NRFX_SPI2_ENABLED 0
+#define NRFX_SPI2_ENABLED 1
 #endif
 
 // <o> NRFX_SPI_MISO_PULL_CFG  - MISO pin pull configuration.
@@ -937,7 +937,7 @@
 // <e> SPI0_ENABLED - Enable SPI0 instance
 //==========================================================
 #ifndef SPI0_ENABLED
-#define SPI0_ENABLED 1
+#define SPI0_ENABLED 0
 #endif
 // <q> SPI0_USE_EASY_DMA  - Use EasyDMA
  
@@ -951,7 +951,7 @@
 // <e> SPI1_ENABLED - Enable SPI1 instance
 //==========================================================
 #ifndef SPI1_ENABLED
-#define SPI1_ENABLED 0
+#define SPI1_ENABLED 1
 #endif
 // <q> SPI1_USE_EASY_DMA  - Use EasyDMA
  
@@ -2605,6 +2605,106 @@
 
 // </e>
 
+// <e> NRFX_TWI_ENABLED - nrfx_twi - TWI peripheral driver
+//==========================================================
+#ifndef NRFX_TWI_ENABLED
+#define NRFX_TWI_ENABLED 1
+#endif
+// <q> NRFX_TWI0_ENABLED  - Enable TWI0 instance
+ 
+
+#ifndef NRFX_TWI0_ENABLED
+#define NRFX_TWI0_ENABLED 1
+#endif
+
+// <q> NRFX_TWI1_ENABLED  - Enable TWI1 instance
+ 
+
+#ifndef NRFX_TWI1_ENABLED
+#define NRFX_TWI1_ENABLED 0
+#endif
+
+// <o> NRFX_TWI_DEFAULT_CONFIG_FREQUENCY  - Frequency
+ 
+// <26738688=> 100k 
+// <67108864=> 250k 
+// <104857600=> 400k 
+
+#ifndef NRFX_TWI_DEFAULT_CONFIG_FREQUENCY
+#define NRFX_TWI_DEFAULT_CONFIG_FREQUENCY 26738688
+#endif
+
+// <q> NRFX_TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT  - Enables bus holding after uninit
+ 
+
+#ifndef NRFX_TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT
+#define NRFX_TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT 0
+#endif
+
+// <o> NRFX_TWI_DEFAULT_CONFIG_IRQ_PRIORITY  - Interrupt priority
+ 
+// <0=> 0 (highest) 
+// <1=> 1 
+// <2=> 2 
+// <3=> 3 
+// <4=> 4 
+// <5=> 5 
+// <6=> 6 
+// <7=> 7 
+
+#ifndef NRFX_TWI_DEFAULT_CONFIG_IRQ_PRIORITY
+#define NRFX_TWI_DEFAULT_CONFIG_IRQ_PRIORITY 6
+#endif
+
+// <e> NRFX_TWI_CONFIG_LOG_ENABLED - Enables logging in the module.
+//==========================================================
+#ifndef NRFX_TWI_CONFIG_LOG_ENABLED
+#define NRFX_TWI_CONFIG_LOG_ENABLED 0
+#endif
+// <o> NRFX_TWI_CONFIG_LOG_LEVEL  - Default Severity level
+ 
+// <0=> Off 
+// <1=> Error 
+// <2=> Warning 
+// <3=> Info 
+// <4=> Debug 
+
+#ifndef NRFX_TWI_CONFIG_LOG_LEVEL
+#define NRFX_TWI_CONFIG_LOG_LEVEL 3
+#endif
+
+// <o> NRFX_TWI_CONFIG_INFO_COLOR  - ANSI escape code prefix.
+ 
+// <0=> Default 
+// <1=> Black 
+// <2=> Red 
+// <3=> Green 
+// <4=> Yellow 
+// <5=> Blue 
+// <6=> Magenta 
+// <7=> Cyan 
+// <8=> White 
+
+#ifndef NRFX_TWI_CONFIG_INFO_COLOR
+#define NRFX_TWI_CONFIG_INFO_COLOR 0
+#endif
+
+// <o> NRFX_TWI_CONFIG_DEBUG_COLOR  - ANSI escape code prefix.
+ 
+// <0=> Default 
+// <1=> Black 
+// <2=> Red 
+// <3=> Green 
+// <4=> Yellow 
+// <5=> Blue 
+// <6=> Magenta 
+// <7=> Cyan 
+// <8=> White 
+
+#ifndef NRFX_TWI_CONFIG_DEBUG_COLOR
+#define NRFX_TWI_CONFIG_DEBUG_COLOR 0
+#endif
+
 // <e> TWIS_CONFIG_LOG_ENABLED - Enables logging in the module.
 //==========================================================
 #ifndef TWIS_CONFIG_LOG_ENABLED
@@ -2701,9 +2801,82 @@
 // <7=> Cyan 
 // <8=> White 
 
-#ifndef TWI_CONFIG_DEBUG_COLOR
-#define TWI_CONFIG_DEBUG_COLOR 0
-#endif
+//#ifndef TWI_CONFIG_DEBUG_COLOR
+//#define TWI_CONFIG_DEBUG_COLOR 0
+//#endif
+
+// <e> TWI_ENABLED - nrf_drv_twi - TWI/TWIM peripheral driver - legacy layer
+//==========================================================
+//#ifndef TWI_ENABLED
+//#define TWI_ENABLED 1
+//#endif
+// <o> TWI_DEFAULT_CONFIG_FREQUENCY  - Frequency
+ 
+// <26738688=> 100k 
+// <67108864=> 250k 
+// <104857600=> 400k 
+
+//#ifndef TWI_DEFAULT_CONFIG_FREQUENCY
+//#define TWI_DEFAULT_CONFIG_FREQUENCY 26738688
+//#endif
+
+// <q> TWI_DEFAULT_CONFIG_CLR_BUS_INIT  - Enables bus clearing procedure during init
+ 
+
+//#ifndef TWI_DEFAULT_CONFIG_CLR_BUS_INIT
+//#define TWI_DEFAULT_CONFIG_CLR_BUS_INIT 0
+//#endif
+
+// <q> TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT  - Enables bus holding after uninit
+ 
+
+//#ifndef TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT
+//#define TWI_DEFAULT_CONFIG_HOLD_BUS_UNINIT 0
+//#endif
+
+// <o> TWI_DEFAULT_CONFIG_IRQ_PRIORITY  - Interrupt priority
+ 
+
+// <i> Priorities 0,2 (nRF51) and 0,1,4,5 (nRF52) are reserved for SoftDevice
+// <0=> 0 (highest) 
+// <1=> 1 
+// <2=> 2 
+// <3=> 3 
+// <4=> 4 
+// <5=> 5 
+// <6=> 6 
+// <7=> 7 
+
+//#ifndef TWI_DEFAULT_CONFIG_IRQ_PRIORITY
+//#define TWI_DEFAULT_CONFIG_IRQ_PRIORITY 6
+//#endif
+
+// <e> TWI0_ENABLED - Enable TWI0 instance
+//==========================================================
+//#ifndef TWI0_ENABLED
+//#define TWI0_ENABLED 0
+//#endif
+// <q> TWI0_USE_EASY_DMA  - Use EasyDMA (if present)
+ 
+
+//#ifndef TWI0_USE_EASY_DMA
+//#define TWI0_USE_EASY_DMA 1
+//#endif
+
+// </e>
+
+// <e> TWI1_ENABLED - Enable TWI1 instance
+//==========================================================
+//#ifndef TWI1_ENABLED
+//#define TWI1_ENABLED 0
+//#endif
+// <q> TWI1_USE_EASY_DMA  - Use EasyDMA (if present)
+ 
+
+//#ifndef TWI1_USE_EASY_DMA
+//#define TWI1_USE_EASY_DMA 1
+//#endif
+
 
 // </e>
 
@@ -4200,9 +4373,9 @@
 
 // <e> NRF_TWI_SENSOR_CONFIG_LOG_ENABLED - Enables logging in the module.
 //==========================================================
-#ifndef NRF_TWI_SENSOR_CONFIG_LOG_ENABLED
-#define NRF_TWI_SENSOR_CONFIG_LOG_ENABLED 0
-#endif
+//#ifndef NRF_TWI_SENSOR_CONFIG_LOG_ENABLED
+//#define NRF_TWI_SENSOR_CONFIG_LOG_ENABLED 0
+//#endif
 // <o> NRF_TWI_SENSOR_CONFIG_LOG_LEVEL  - Default Severity level
  
 // <0=> Off 
@@ -4211,9 +4384,9 @@
 // <3=> Info 
 // <4=> Debug 
 
-#ifndef NRF_TWI_SENSOR_CONFIG_LOG_LEVEL
-#define NRF_TWI_SENSOR_CONFIG_LOG_LEVEL 3
-#endif
+//#ifndef NRF_TWI_SENSOR_CONFIG_LOG_LEVEL
+//#define NRF_TWI_SENSOR_CONFIG_LOG_LEVEL 3
+//#endif
 
 // <o> NRF_TWI_SENSOR_CONFIG_INFO_COLOR  - ANSI escape code prefix.
  
@@ -4227,9 +4400,9 @@
 // <7=> Cyan 
 // <8=> White 
 
-#ifndef NRF_TWI_SENSOR_CONFIG_INFO_COLOR
-#define NRF_TWI_SENSOR_CONFIG_INFO_COLOR 0
-#endif
+//#ifndef NRF_TWI_SENSOR_CONFIG_INFO_COLOR
+//#define NRF_TWI_SENSOR_CONFIG_INFO_COLOR 0
+//#endif
 
 // <o> NRF_TWI_SENSOR_CONFIG_DEBUG_COLOR  - ANSI escape code prefix.
  
@@ -4243,9 +4416,9 @@
 // <7=> Cyan 
 // <8=> White 
 
-#ifndef NRF_TWI_SENSOR_CONFIG_DEBUG_COLOR
-#define NRF_TWI_SENSOR_CONFIG_DEBUG_COLOR 0
-#endif
+//#ifndef NRF_TWI_SENSOR_CONFIG_DEBUG_COLOR
+//#define NRF_TWI_SENSOR_CONFIG_DEBUG_COLOR 0
+//#endif
 
 // </e>
 
