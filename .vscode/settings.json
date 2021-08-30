@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "nordic_common.h": "c",
+        "nrf_delay.h": "c",
+        "stdbool.h": "c"
+    }
+}

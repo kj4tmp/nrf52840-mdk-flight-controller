@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/jeff/Repositories/nrf52840-mdk-flight-controller'
+make: Leaving directory '/home/jeff/Repositories/nrf52840-mdk-flight-controller'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+ 
